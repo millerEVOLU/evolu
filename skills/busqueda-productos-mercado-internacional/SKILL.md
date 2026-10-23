@@ -16,47 +16,46 @@ El skill `busqueda-productos-colombia` se conserva. Sus pasos son las recomendac
 ## Paso 1 · Mercado internacional
 
 1. Abrir la Biblioteca de Anuncios de Meta.
-2. Buscar en todos los países y en todos los anuncios, sin limitarse a uno.
+2. Buscar en todos los países y en todos los anuncios, sin limitarse a uno. Conviene abrirse a más países que los de siempre. Las tiendas de Shanghái son muy buenas.
 3. Filtrar por impresiones. Se priorizan los anuncios con buenas impresiones.
-4. Buscar por puntos de dolor, porque ahí aparecen las landings ganadoras. Ejemplos de búsqueda: acné, artritis, pantallas y niños. Se pueden sumar otros dolores del mismo estilo.
-5. Cada landing ganadora que aparezca se guarda en el banco de páginas ganadoras.
+4. Buscar por puntos de dolor, porque ahí aparecen las landings ganadoras. Los ejemplos de partida son acné, artritis, pantallas y niños, pero la lista no se limita a esos: hay que ampliarla (dolor de espalda, rodillas, varices, caída del cabello, insomnio, plagas, humedad, mascotas, auto, jardín, y los que vayan saliendo).
+5. Cada landing ganadora se evalúa con los filtros de página del paso 2.
 
-## Paso 2 · Optimización en Claude
+## Paso 2 · Filtros de página y banco de landings
 
-Los hallazgos del paso 1 se pasan a Claude para ordenarlos y depurarlos: agrupar por problema, quitar duplicados, descartar lo que claramente no sirve para Colombia y resumir lo que queda.
+Una página sirve si cumple estas condiciones:
 
-Con los resultados se crea y se mantiene el **banco de páginas ganadoras** en Excel. Columnas mínimas sugeridas:
+- Tiene más de 600 productos.
+- Tiene productos lanzados hace menos de 10 meses.
+- Esos productos posiblemente estén en Dropi.
 
-| Columna | Contenido |
-|---|---|
-| Producto | Qué es, en una línea |
-| Problema o dolor | Lo que resuelve |
-| País donde vende | De dónde salió |
-| Enlace al anuncio | Directo a la Biblioteca |
-| Enlace a la landing | Página de venta |
-| Impresiones | Lo que muestre la Biblioteca |
-| Activo desde | Fecha de inicio de circulación |
-| Estado en Colombia | No está / está con N competidores |
-| Ángulo del competidor | Cómo lo venden hoy |
-| Ángulo propio | Cómo lo venderíamos distinto |
-| Proveedor Dropi | Sí / no / alternativa |
-| Veredicto | Probar / observar / descartar |
+Si cumple, la landing se deja registrada en el banco y se sigue buscando más landings. No se profundiza en una sola.
 
-## Paso 3 · Revisar competencia
+El banco de páginas ganadoras vive en un Excel (`EVOLU_Banco_Productos.xlsx`, en la carpeta `entregables`). Los hallazgos también se pasan a Claude para ordenarlos y depurarlos: agrupar por problema, quitar duplicados y resumir lo que queda.
 
-Tomar los creativos validados en otro país y comprobar si ya existen en Colombia.
+## Paso 3 · Best winners con PPSPY
 
-- Si no están en Colombia, es candidato directo.
-- Si están, contar los competidores. Que haya hasta cinco competidores no descarta el producto, siempre que lo vendamos con otro ángulo (otra promesa, otro público, otra oferta, otro dolor principal). Sin un ángulo distinto y concreto, se descarta.
+De cada página guardada se sacan unos 20 productos, los best winners, y se revisan rápido en PPSPY. Se registran en la hoja Productos. Al final solo quedan uno o dos que pasan todos los filtros.
 
-## Paso 4 · Qué es un creativo bueno
+## Paso 4 · Análisis profundo de la competencia
 
-Un creativo vale la pena cuando cumple estas condiciones:
+Este paso es el más importante y el que más se descuida. Hay que revisar toda la competencia a fondo, porque a veces se dice que no hay tantos competidores y después aparecen más. Se repite la búsqueda desde distintos términos, anunciantes y países antes de dar un número.
 
-- Tiene buenas impresiones.
-- No es de los más recientes. Debe llevar tiempo en circulación, porque eso indica que sigue rentable.
-- La página que lo respalda está haciendo un despliegue importante: varias variantes de creativos, inversión sostenida, tráfico real hacia la landing.
-- Se mira desde cuándo está en circulación y se compara con el resto de anuncios de esa misma página.
+Reglas para contar competidores:
+
+- Solo cuenta quien vende por **landing**.
+- Quien vende solo por WhatsApp no compite y no se cuenta.
+- Una landing apagada no compite y no se cuenta.
+- Hasta 5 competidores no descartan el producto si lo vendemos con otro ángulo (otra promesa, otro público, otra oferta, otro dolor principal). Sin un ángulo distinto y concreto, se descarta.
+
+Después se comprueba qué creativos validados en otros países todavía no están en Colombia. Esos son los mejores candidatos.
+
+Un creativo bueno cumple:
+
+- Buenas impresiones.
+- No es de los más recientes: lleva tiempo en circulación.
+- La página que lo respalda está haciendo un despliegue importante.
+- Se compara desde cuándo está en circulación frente al resto de anuncios de esa página.
 
 ## Paso 5 · Búsqueda del producto en Dropi
 
@@ -76,7 +75,6 @@ Estos datos no están en las notas del método y conviene fijarlos para que no q
 - Umbral de impresiones que cuenta como "bueno".
 - Cuántos días mínimos en circulación se exigen para llamar "validado" a un creativo.
 - Qué se entiende exactamente por "despliegue importante" (número de variantes, de anuncios activos, etc.).
-- Si el Excel vive en Google Sheets o en un archivo local.
 
 ## Escritura
 
